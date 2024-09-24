@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primera Página en Django</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav>
+      <section class="navbar" id="navbar">
+        <section class="navbar_section-home">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="24"
+            viewBox="0 0 18 24"
+            fill="none"
+          >
+            <path
+              d="M17.0286 18.6372C15.3 20.3775 13.5672 22.1178 11.8386 23.8498C7.87437 19.8957 4.01822 15.8336 0 11.9336C1.81588 10.1143 3.05002 8.87662 5.00719 6.90789C6.9602 4.94331 9.63208 2.24773 11.7264 0.150238C13.5132 1.84484 15.2127 3.62252 16.958 5.35865C14.7681 7.56829 12.5865 9.77376 10.3967 11.9834C12.6073 14.2013 14.818 16.4234 17.0327 18.6331L17.0286 18.6372Z"
+              fill="#33CC99"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="36"
+            viewBox="0 0 15 36"
+            fill="none"
+          >
+            <path
+              d="M14.1793 0.796454C12.0227 12.2641 9.99486 23.7525 7.77591 35.2077C5.44476 35.2077 3.11361 35.2077 0.786621 35.2119C3.0222 23.7567 5.01676 12.26 7.17338 0.788147C9.50869 0.788147 11.844 0.796454 14.1793 0.796454Z"
+              fill="#33CC99"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="24"
+            viewBox="0 0 18 24"
+            fill="none"
+          >
+            <path
+              d="M18.0075 11.9979C17.9161 12.0519 17.7998 12.1848 17.7374 12.2347C17.7333 12.2388 17.7291 12.243 17.725 12.243C17.725 12.2471 17.7208 12.2472 17.7208 12.2472C17.7125 12.2513 17.7125 12.2555 17.7125 12.2555C17.351 12.5587 17.6585 12.3136 17.1765 12.7996C15.693 14.2948 14.488 15.5242 12.7095 17.3268C10.9268 19.1253 8.20923 21.825 6.24375 23.7813C4.42787 22.124 2.7408 20.3381 0.98309 18.6227C3.18542 16.4172 5.3836 14.22 7.58178 12.0187C5.36282 9.81323 3.14803 7.60776 0.933228 5.39812C2.67847 3.67444 4.38632 1.91339 6.15649 0.218781C8.23832 2.29135 10.7731 4.83741 12.7469 6.80199C14.7207 8.76657 16.0961 10.1912 18.0034 12.0021L18.0075 11.9979Z"
+              fill="#33CC99"
+            />
+          </svg>
+        </section>
+        <section class="navbar_section-menu">
+          <span class="menu-icon" id="menu-icon" onclick="toggleMenu()">
+            Menu
+          </span>
+        </section>
+      </section>
+      <section class="menu" id="menu">
+        <section class="menu_section1">
+          <section class="navbar_section-home">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="24"
+              viewBox="0 0 18 24"
+              fill="none"
+            >
+              <path
+                d="M17.0286 18.6372C15.3 20.3775 13.5672 22.1178 11.8386 23.8498C7.87437 19.8957 4.01822 15.8336 0 11.9336C1.81588 10.1143 3.05002 8.87662 5.00719 6.90789C6.9602 4.94331 9.63208 2.24773 11.7264 0.150238C13.5132 1.84484 15.2127 3.62252 16.958 5.35865C14.7681 7.56829 12.5865 9.77376 10.3967 11.9834C12.6073 14.2013 14.818 16.4234 17.0327 18.6331L17.0286 18.6372Z"
+                fill="#33CC99"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="36"
+              viewBox="0 0 15 36"
+              fill="none"
+            >
+              <path
+                d="M14.1793 0.796454C12.0227 12.2641 9.99486 23.7525 7.77591 35.2077C5.44476 35.2077 3.11361 35.2077 0.786621 35.2119C3.0222 23.7567 5.01676 12.26 7.17338 0.788147C9.50869 0.788147 11.844 0.796454 14.1793 0.796454Z"
+                fill="#33CC99"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="24"
+              viewBox="0 0 18 24"
+              fill="none"
+            >
+              <path
+                d="M18.0075 11.9979C17.9161 12.0519 17.7998 12.1848 17.7374 12.2347C17.7333 12.2388 17.7291 12.243 17.725 12.243C17.725 12.2471 17.7208 12.2472 17.7208 12.2472C17.7125 12.2513 17.7125 12.2555 17.7125 12.2555C17.351 12.5587 17.6585 12.3136 17.1765 12.7996C15.693 14.2948 14.488 15.5242 12.7095 17.3268C10.9268 19.1253 8.20923 21.825 6.24375 23.7813C4.42787 22.124 2.7408 20.3381 0.98309 18.6227C3.18542 16.4172 5.3836 14.22 7.58178 12.0187C5.36282 9.81323 3.14803 7.60776 0.933228 5.39812C2.67847 3.67444 4.38632 1.91339 6.15649 0.218781C8.23832 2.29135 10.7731 4.83741 12.7469 6.80199C14.7207 8.76657 16.0961 10.1912 18.0034 12.0021L18.0075 11.9979Z"
+                fill="#33CC99"
+              />
+            </svg>
+          </section>
+          <button onclick="toggleMenu()" class="btn-close-menu">></button>
+        </section>
+        <section class="menu_section2">
+          <ul>
+            <li><a href="#inicio">Servicios</a></li>
+            <li><a href="#servicios">Portfolio</a></li>
+            <li><a href="#sobre-nosotros">Nosotros</a></li>
+          </ul>
+          <button>Contactar</button>
+        </section>
+      </section>
+    </nav>
+
+    <!-- Primera sección -->
+    <section class="section_1">
+      <div>
+        <div class="section_1-titulo_1">Creadores de</div>
+        <div class="section_1-titulo_2">experiencias digitales</div>
+      </div>
+    </section>
+
+    <!-- Segunda sección -->
+    <section class="section_2">
+      <div class="section_2-presentacion">
+        <img src="{% static 'img/octopush.svg' %}" alt="Logo">
+        <div class="section_2-presentacion-texto_1">Somos Octopush</div>
+        <div class="section_2-presentacion-texto_2">Una agencia apasionada por el diseño y el desarrollo web. Nos especializamos en crear soluciones digitales a medida que no solo se ven bien, sino que también funcionan bien.</div>
+      </div>
+      <div class="section_2-trabajos">
+
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("show");
+        if (document.body.style.overflow == 'hidden'){
+          document.body.style.overflow = '';
+        }else{
+          document.body.style.overflow = 'hidden';
+        }
+      }
+    </script>
+  </body>
+</html>
